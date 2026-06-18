@@ -6,10 +6,10 @@ Testing ground to earn every GitHub achievement that can be done solo.
 
 | Achievement | Status | Notes |
 |---|---|---|
-| Pull Shark | In progress | Default tier done; bronze needs 16 merged PRs (you have 5) |
+| Pull Shark | In progress | 16 merged PRs reached — bronze tier may take time to appear |
 | Quickdraw | Done | |
 | Pair Extraordinaire | Done | Earned outside this repo |
-| YOLO | Blocked | Needs a second account as collaborator + reviewer |
+| YOLO | Done | Earned with a requested reviewer before merge |
 | Starstruck | | Needs 16+ stars on a repo you created |
 | Galaxy Brain | | Needs an accepted Discussion answer |
 | Public Sponsor | | Requires GitHub Sponsors |
