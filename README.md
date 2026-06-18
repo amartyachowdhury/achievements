@@ -6,7 +6,7 @@ Testing ground to earn every GitHub achievement that can be done solo.
 
 | Achievement | Status | Notes |
 |---|---|---|
-| Pull Shark | Done | Default tier |
+| Pull Shark | In progress | Default tier done; bronze needs 16 merged PRs (you have 5) |
 | Quickdraw | Done | |
 | Pair Extraordinaire | Done | Earned outside this repo |
 | YOLO | Blocked | Needs a second account as collaborator + reviewer |
@@ -29,3 +29,15 @@ YOLO_REVIEWER=other-username ./scripts/yolo.sh
 ```
 
 Also confirm [Show Achievements on my profile](https://github.com/settings/profile#profile-settings-heading) is enabled in profile settings.
+
+## Pull Shark
+
+Merge pull requests you open. Tiers: **2 → 16 → 128 → 1024**.
+
+```bash
+# Merge one PR
+./scripts/pull-shark.sh
+
+# Merge 11 PRs toward bronze (16 total)
+PULL_SHARK_COUNT=11 ./scripts/pull-shark.sh
+```
