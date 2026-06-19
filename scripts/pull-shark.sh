@@ -5,6 +5,7 @@ repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$repo_root"
 
 count="${1:-${PULL_SHARK_COUNT:-1}}"
+delay="${PULL_SHARK_DELAY:-10}"
 log="achievements/pull-shark-log.md"
 
 if ! [[ "$count" =~ ^[0-9]+$ ]] || [[ "$count" -lt 1 ]]; then
@@ -57,11 +58,17 @@ for ((i = 1; i <= count; i++)); do
     --head "$branch")"
 
   pr_number="${pr_url##*/}"
+  sleep "$delay"
   gh pr merge "$pr_number" --merge --delete-branch
   echo "Merged $pr_url"
 
   git checkout main
   git pull --ff-only origin main
+
+  if [[ "$i" -lt "$count" ]]; then
+    echo "Waiting ${delay}s before next merge..."
+    sleep "$delay"
+  fi
 done
 
 echo "Pull Shark batch complete: $count merged pull request(s)."

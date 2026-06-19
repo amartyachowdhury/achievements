@@ -35,9 +35,12 @@ Also confirm [Show Achievements on my profile](https://github.com/settings/profi
 Merge pull requests you open. Tiers: **2 → 16 → 128 → 1024**.
 
 ```bash
-# Merge one PR
+# Merge one PR (10s delay before merge by default)
 ./scripts/pull-shark.sh
 
 # Merge 11 PRs toward bronze (16 total)
 PULL_SHARK_COUNT=11 ./scripts/pull-shark.sh
+
+# Custom delay between steps (seconds)
+PULL_SHARK_DELAY=15 ./scripts/pull-shark.sh
 ```
